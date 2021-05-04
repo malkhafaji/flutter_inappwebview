@@ -470,11 +470,6 @@ class AndroidInAppWebViewOptions
   ///If the url request of a subframe matches the regular expression, then the request of that subframe is canceled.
   String regexToCancelSubFramesLoading;
 
-  ///Set to `true` to enable Flutter's new Hybrid Composition. The default value is `false`.
-  ///Hybrid Composition is supported starting with Flutter v1.20.
-  ///**NOTE**: It is recommended to use Hybrid Composition only on Android 10+ for a release app, as it can cause framerate drops on animations in Android 9 and lower.
-  bool useHybridComposition;
-
   ///Set to `true` to be able to listen at the [WebView.androidShouldInterceptRequest] event. The default value is `false`.
   bool useShouldInterceptRequest;
 
@@ -561,7 +556,6 @@ class AndroidInAppWebViewOptions
     this.initialScale = 0,
     this.supportMultipleWindows = false,
     this.regexToCancelSubFramesLoading,
-    this.useHybridComposition = false,
     this.useShouldInterceptRequest = false,
     this.useOnRenderProcessGone = false,
     this.overScrollMode = AndroidOverScrollMode.OVER_SCROLL_IF_CONTENT_SCROLLS,
@@ -619,7 +613,6 @@ class AndroidInAppWebViewOptions
       "thirdPartyCookiesEnabled": thirdPartyCookiesEnabled,
       "hardwareAcceleration": hardwareAcceleration,
       "supportMultipleWindows": supportMultipleWindows,
-      "useHybridComposition": useHybridComposition,
       "regexToCancelSubFramesLoading": regexToCancelSubFramesLoading,
       "useShouldInterceptRequest": useShouldInterceptRequest,
       "useOnRenderProcessGone": useOnRenderProcessGone,
@@ -683,7 +676,6 @@ class AndroidInAppWebViewOptions
     options.supportMultipleWindows = map["supportMultipleWindows"];
     options.regexToCancelSubFramesLoading =
         map["regexToCancelSubFramesLoading"];
-    options.useHybridComposition = map["useHybridComposition"];
     options.useShouldInterceptRequest = map["useShouldInterceptRequest"];
     options.useOnRenderProcessGone = map["useOnRenderProcessGone"];
     options.overScrollMode =

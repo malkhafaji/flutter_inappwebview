@@ -1675,8 +1675,6 @@ final public class InAppWebView extends InputAwareWebView {
           final ActionMode actionMode,
           final ActionMode.Callback callback
   ) {
-	if (containerView != null)
-		onWindowFocusChanged(isFocused());
     boolean hasBeenRemovedAndRebuilt = false;
     if (floatingContextMenu != null) {
       hideContextMenu();
